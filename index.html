@@ -5,6 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>民泊おもてなしAIチャット｜AIがゲスト対応を即レス・15言語対応｜MOSVA</title>
 <meta name="description" content="Airbnb・民泊向けAIチャットサービス。24時間365日、15言語で即時返信。ゲストの質問内容をリアルタイムでスプレッドシート共有。月額7,980円から。">
+<meta name="keywords" content="民泊,AI,チャットボット,Airbnb,ゲスト対応,自動返信,多言語対応,15言語,おもてなし,MOSVA,民泊運営,バケーションレンタル">
+<meta name="author" content="株式会社MOSVA">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ai.mosva.jp/">
+
+<!-- OGP (Open Graph) -->
+<meta property="og:title" content="民泊おもてなしAIチャット｜24時間15言語で即レス対応">
+<meta property="og:description" content="Airbnb・民泊のゲスト対応をAIが自動化。24時間365日、15言語で即時返信。月額7,980円から。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ai.mosva.jp/">
+<meta property="og:image" content="https://ai.mosva.jp/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="民泊おもてなしAIチャット｜MOSVA">
+<meta property="og:locale" content="ja_JP">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="民泊おもてなしAIチャット｜24時間15言語で即レス対応">
+<meta name="twitter:description" content="Airbnb・民泊のゲスト対応をAIが自動化。24時間365日、15言語で即時返信。月額7,980円から。">
+<meta name="twitter:image" content="https://ai.mosva.jp/ogp.png">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/ogp.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -1464,7 +1490,7 @@
   .footer-info { font-size: 13px; color: rgba(255,255,255,0.5); }
   .footer-bottom {
     max-width: 1200px; margin: 0 auto;
-    padding: 24px 0; text-align: center;
+    padding: 24px 0 80px; text-align: center;
   }
   .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.4); }
 
@@ -1497,32 +1523,38 @@
   }
   @media (max-width: 968px) {
     .footer-inner { flex-direction: column; align-items: center; text-align: center; }
-    .footer-links { gap: 40px; }
+    .footer-links { gap: 32px; }
+    footer { padding: 48px 20px 0; }
   }
   @media (max-width: 640px) {
     .problem-grid { grid-template-columns: 1fr; }
-    .hero-stats { gap:24px; }
-    section { padding: 80px 20px; }
-    .demo { padding: 60px 20px 80px; }
-    .hero { padding: 130px 20px 80px; }
-    .hero h1 { font-size: 28px; }
+    .problem-card { padding: 24px 20px; }
+    .hero-stats { gap:16px; }
+    .hero-stat { min-width: 0; }
+    section { padding: 60px 16px; }
+    .demo { padding: 48px 16px 72px; }
+    .hero { padding: 120px 16px 64px; }
+    .hero h1 { font-size: 26px; line-height:1.4; }
     .hero h1 br { display: none; }
     .hero h1 .gradient-text { white-space: normal; }
+    .hero-sub { font-size:14px; }
+    .section-title { font-size: 24px; }
+    .section-desc { font-size: 14px; }
     .ss-table { font-size:10px; }
     .ss-table thead th { padding:7px 8px; font-size:10px; }
     .ss-table tbody td { padding:6px 8px; font-size:10px; }
     .ss-answer-text { max-width: 140px; font-size:10px; }
     .ss-gsheet-title { font-size:12px; }
-    .ss-wrapper { padding: 12px; border-radius: 14px; }
-    .ss-table { min-width: 500px; }
+    .ss-wrapper { padding: 10px; border-radius: 12px; }
+    .ss-table { min-width: 480px; }
     .header-inner { padding: 0 16px; }
-    .footer-links { flex-direction: column; gap: 28px; }
+    .footer-links { flex-direction: column; gap: 20px; }
     .phone-frame { width: 260px; }
     .qr-card-outer { width: 260px; }
     .phone-screen { height: 480px; }
     .qr-card-frame { height: 480px; padding: 20px 16px 18px; }
     .qr-card-qr { width: 110px; height: 110px; }
-    .demo-phones { gap: 20px; }
+    .demo-phones { gap: 20px; flex-direction: column; align-items: center; }
     .qr-flow-arrow { font-size: 24px; transform: rotate(90deg); }
     .qr-flow-arrow { animation: arrow-pulse-m 2s ease-in-out infinite; }
     @keyframes arrow-pulse-m {
@@ -1530,7 +1562,7 @@
       50% { opacity: 1; transform: rotate(90deg) translateX(6px); }
     }
     .floating-cta {
-      bottom: 16px; right: 16px; left: 16px;
+      bottom: 12px; right: 12px; left: 12px;
       animation: none;
     }
     .floating-cta .btn {
@@ -1549,8 +1581,110 @@
       width: 56px; height: 56px;
       font-size: 18px;
     }
+    /* Plan cards mobile */
+    .plan-card { padding: 32px 24px; }
+    .plan-amount { font-size: 44px; }
+    .plan-name { font-size: 20px; }
+    .plan-initial { font-size: 12px; }
+    .plan-tagline { font-size: 12px; padding: 4px 12px; }
+    /* Feature cards mobile */
+    .feature-card { padding: 28px 24px; }
+    .feature-num { font-size: 48px; }
+    /* Comparison table mobile */
+    .comparison-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; margin-top: 36px; }
+    .comp-table { min-width: 440px; }
+    .comp-table thead th { padding: 12px 10px; font-size: 12px; }
+    .comp-table tbody td { padding: 10px 10px; font-size: 12px; }
+    .comp-table tbody td:first-child { font-size: 12px; }
+    /* Campaign banner mobile */
+    .campaign-title { font-size: 20px; }
+    .campaign-title em { font-size: 30px; }
+    .campaign-body { padding: 14px 16px 18px; }
+    .campaign-top { padding: 8px 16px; }
+    .campaign-limit { font-size: 12px; }
+    /* CTA section mobile */
+    .cta-section h2 { font-size: 24px; }
+    .cta-section p { font-size: 14px; }
+    /* FAQ mobile */
+    .faq-q { font-size: 14px; padding: 16px 0; }
+    .faq-a { font-size: 13px; }
   }
 </style>
+
+<!-- 構造化データ (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "民泊おもてなしAIチャット",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Airbnb・民泊向けAIチャットサービス。24時間365日、15言語で即時返信。ゲスト対応を自動化。",
+  "url": "https://ai.mosva.jp/",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "AIコンシェルジュ",
+      "price": "7980",
+      "priceCurrency": "JPY",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "7980",
+        "priceCurrency": "JPY",
+        "billingDuration": "P1M"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "おもてなしAI+",
+      "price": "29800",
+      "priceCurrency": "JPY",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "29800",
+        "priceCurrency": "JPY",
+        "billingDuration": "P1M"
+      }
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "株式会社MOSVA",
+    "url": "https://mosva.jp/"
+  },
+  "featureList": [
+    "24時間365日自動応答",
+    "15言語リアルタイム翻訳",
+    "1分以内の即時返信",
+    "スプレッドシート連携",
+    "Airbnb・Booking.com対応"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "民泊おもてなしAIチャットとは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Airbnb・民泊のゲスト対応をAIが24時間365日自動化するチャットサービスです。15言語でリアルタイム翻訳し、1分以内に即時返信します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "料金はいくらですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AIコンシェルジュプランは月額7,980円（税抜）、おもてなしAI+プランは月額29,800円（税抜）です。"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
