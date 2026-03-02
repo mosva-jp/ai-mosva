@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>民泊おもてなしAIチャット｜AIがゲスト対応を即レス・15言語対応｜MOSVA</title>
-<meta name="description" content="Airbnb・民泊向けAIチャットサービス。24時間365日、15言語で即時返信。ゲストの質問内容をリアルタイムでスプレッドシート共有。月額9,800円から。">
+<meta name="description" content="Airbnb・民泊向けAIチャットサービス。24時間365日、15言語で即時返信。ゲストの質問内容をリアルタイムでスプレッドシート共有。月額7,980円から。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -1339,6 +1339,41 @@
     color:#94a3b8 !important;
   }
 
+  /* ===== CAMPAIGN BANNER ===== */
+  .campaign-banner {
+    display:flex; align-items:center; gap:16px;
+    background: linear-gradient(135deg, #fef3c7, #fff7ed);
+    border: 2px solid #f59e0b;
+    border-radius:16px; padding:20px 28px;
+    margin-bottom:32px; max-width:600px; margin-left:auto; margin-right:auto;
+    box-shadow: 0 4px 20px rgba(245,158,11,0.15);
+    animation: campaignPulse 3s ease-in-out infinite;
+  }
+  @keyframes campaignPulse {
+    0%,100% { box-shadow: 0 4px 20px rgba(245,158,11,0.15); }
+    50% { box-shadow: 0 4px 30px rgba(245,158,11,0.3); }
+  }
+  .campaign-badge {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color:#fff; font-size:12px; font-weight:800;
+    padding:6px 14px; border-radius:20px; white-space:nowrap;
+    letter-spacing:0.5px;
+  }
+  .campaign-text { display:flex; flex-direction:column; gap:4px; }
+  .campaign-title {
+    font-size:16px; font-weight:800; color:#92400e;
+    letter-spacing:-0.3px;
+  }
+  .campaign-sub {
+    font-size:12px; color:#b45309; line-height:1.4;
+  }
+  @media (max-width:640px) {
+    .campaign-banner {
+      flex-direction:column; text-align:center; gap:10px;
+      padding:16px 20px;
+    }
+  }
+
   /* ===== FLOATING CTA ===== */
   .floating-cta {
     position: fixed;
@@ -1549,7 +1584,7 @@
         <div class="hero-stat-label">稼働時間</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">9,800<small>円〜</small></div>
+        <div class="hero-stat-num">7,980<small>円〜</small></div>
         <div class="hero-stat-label">月額料金</div>
       </div>
     </div>
@@ -1867,7 +1902,7 @@
   <div class="container">
     <div class="section-label reveal">Pricing</div>
     <h2 class="section-title reveal">シンプルな2プラン</h2>
-    <div class="section-desc reveal">初期設定費はどちらも30,000円。まずはAIプランから始めて、<br>必要に応じてアップグレードできます。</div>
+    <div class="section-desc reveal">まずはAIプランから始めて、必要に応じてアップグレードできます。</div>
     <div class="pricing-grid">
       <!-- AI Plan -->
       <div class="plan-card reveal">
@@ -1876,10 +1911,10 @@
         <div class="plan-desc">QRコードを部屋に置くだけ。<br>ゲストの質問にAIが15言語で即レス。</div>
         <div class="plan-price">
           <span class="plan-currency">月額</span>
-          <span class="plan-amount">9,800</span>
+          <span class="plan-amount">7,980</span>
           <span class="plan-period">円/月</span>
         </div>
-        <div class="plan-initial">初期設定費：30,000円（税抜）※振込可</div>
+        <div class="plan-initial">初期設定費：39,800円（税抜）｜最低契約期間：3ヶ月</div>
         <ul class="plan-features">
           <li>QRコード設置（部屋に置くだけ）</li>
           <li>AI即時自動返信（24時間365日）</li>
@@ -1901,7 +1936,7 @@
           <span class="plan-amount">29,800</span>
           <span class="plan-period">円/月</span>
         </div>
-        <div class="plan-initial">初期設定費：30,000円（税抜）※振込可</div>
+        <div class="plan-initial">初期設定費：49,800円（税抜）｜最低契約期間：6ヶ月</div>
         <ul class="plan-features">
           <li>AIコンシェルジュの全機能</li>
           <li>Airbnbメッセージ対応代行</li>
@@ -1943,6 +1978,8 @@
           <tr><td>清掃連携・請求対応</td><td class="comp-cross">✕</td><td class="comp-check">✓</td></tr>
           <tr><td>月次レポート</td><td class="comp-cross">✕</td><td class="comp-check">✓</td></tr>
           <tr><td>Q&A追加・回答修正</td><td>月3件</td><td>月10件</td></tr>
+          <tr><td>月額料金（税抜）</td><td><strong>7,980円</strong></td><td><strong>29,800円</strong></td></tr>
+          <tr><td>初期設定費（税抜）</td><td>39,800円</td><td>49,800円</td></tr>
           <tr><td>最低契約期間</td><td>3ヶ月</td><td>6ヶ月</td></tr>
         </tbody>
       </table>
@@ -2063,7 +2100,7 @@
           AIプランからおもてなしAI+への変更はできますか？
           <span class="faq-arrow">+</span>
         </div>
-        <div class="faq-a">はい、いつでもアップグレード可能です。初期設定費は不要で、月額の差額分のみでプラン変更できます。</div>
+        <div class="faq-a">はい、いつでもアップグレード可能です。Airbnb連携の追加設定費のみで月額プラン変更できます。</div>
       </div>
       <div class="faq-item reveal">
         <div class="faq-q" onclick="toggleFaq(this)">
@@ -2121,6 +2158,13 @@
 <!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="container">
+    <div class="campaign-banner reveal">
+      <div class="campaign-badge">LINE限定</div>
+      <div class="campaign-text">
+        <span class="campaign-title">初期費用 半額キャンペーン実施中</span>
+        <span class="campaign-sub">先着5施設限定｜公式LINEからお問い合わせの方だけの特別価格</span>
+      </div>
+    </div>
     <h2 class="reveal">まずは無料相談から。</h2>
     <p class="reveal">公式LINEからお気軽にお問い合わせください。<br>あなたの物件に最適なプランをご提案します。</p>
     <div class="reveal">
@@ -2260,9 +2304,9 @@ function animateCounters() {
           animateNumber(element, 0, 15, 1200, () => {
             element.innerHTML = '15<small>言語</small>';
           });
-        } else if (text.includes('9,800')) {
-          animateNumber(element, 0, 9800, 1200, () => {
-            element.innerHTML = '9,800<small>円〜</small>';
+        } else if (text.includes('7,980')) {
+          animateNumber(element, 0, 7980, 1200, () => {
+            element.innerHTML = '7,980<small>円〜</small>';
           }, true);
         } else if (text === '即時') {
           // Just fade in
