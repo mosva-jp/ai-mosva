@@ -1101,6 +1101,17 @@
   .plan-name {
     font-size:24px; font-weight:800; margin-bottom:8px; color: #0f172a;
   }
+  .plan-tagline {
+    display:inline-block; font-size:13px; font-weight:700;
+    padding:5px 14px; border-radius:20px; margin-bottom:12px;
+    letter-spacing:0.3px;
+  }
+  .plan-tagline.blue {
+    background:rgba(37,99,235,0.08); color:#2563eb; border:1px solid rgba(37,99,235,0.2);
+  }
+  .plan-tagline.rose {
+    background:rgba(236,72,153,0.08); color:#db2777; border:1px solid rgba(236,72,153,0.2);
+  }
   .plan-desc {
     font-size:14px; color:#64748b; line-height:1.7; margin-bottom:28px;
   }
@@ -1114,6 +1125,7 @@
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   }
   .plan-period { font-size:14px; color:#94a3b8; font-weight:500; }
+  .plan-tax { font-size:11px; color:#94a3b8; font-weight:500; margin-left:2px; }
   .plan-initial {
     font-size:13px; color:#94a3b8; margin-bottom:28px;
     padding-bottom:28px; border-bottom: 1px solid rgba(15,23,42,0.08);
@@ -1341,37 +1353,53 @@
 
   /* ===== CAMPAIGN BANNER ===== */
   .campaign-banner {
-    display:flex; align-items:center; gap:16px;
-    background: linear-gradient(135deg, #fef3c7, #fff7ed);
-    border: 2px solid #f59e0b;
-    border-radius:16px; padding:20px 28px;
-    margin-bottom:32px; max-width:600px; margin-left:auto; margin-right:auto;
-    box-shadow: 0 4px 20px rgba(245,158,11,0.15);
+    display:flex; flex-direction:column; align-items:center; gap:0;
+    background: linear-gradient(135deg, #dc2626, #ea580c);
+    border-radius:20px; padding:0;
+    margin-bottom:36px; max-width:560px; margin-left:auto; margin-right:auto;
+    box-shadow: 0 8px 32px rgba(220,38,38,0.3);
     animation: campaignPulse 3s ease-in-out infinite;
+    overflow:hidden; position:relative;
   }
   @keyframes campaignPulse {
-    0%,100% { box-shadow: 0 4px 20px rgba(245,158,11,0.15); }
-    50% { box-shadow: 0 4px 30px rgba(245,158,11,0.3); }
+    0%,100% { box-shadow: 0 8px 32px rgba(220,38,38,0.3); transform:scale(1); }
+    50% { box-shadow: 0 12px 40px rgba(220,38,38,0.45); transform:scale(1.02); }
+  }
+  .campaign-top {
+    width:100%; background:rgba(0,0,0,0.15);
+    padding:10px 20px; text-align:center;
+    display:flex; align-items:center; justify-content:center; gap:8px;
   }
   .campaign-badge {
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-    color:#fff; font-size:12px; font-weight:800;
-    padding:6px 14px; border-radius:20px; white-space:nowrap;
+    background:#fff; color:#dc2626;
+    font-size:11px; font-weight:900;
+    padding:3px 10px; border-radius:4px; white-space:nowrap;
+    letter-spacing:1px; text-transform:uppercase;
+  }
+  .campaign-limit {
+    color:rgba(255,255,255,0.9); font-size:13px; font-weight:700;
     letter-spacing:0.5px;
   }
-  .campaign-text { display:flex; flex-direction:column; gap:4px; }
+  .campaign-body {
+    padding:20px 28px 24px; text-align:center; width:100%;
+  }
   .campaign-title {
-    font-size:16px; font-weight:800; color:#92400e;
-    letter-spacing:-0.3px;
+    font-size:26px; font-weight:900; color:#fff;
+    letter-spacing:-0.5px; line-height:1.3;
+  }
+  .campaign-title em {
+    font-style:normal; font-size:40px;
+    background: linear-gradient(135deg, #fde047, #fbbf24);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
   }
   .campaign-sub {
-    font-size:12px; color:#b45309; line-height:1.4;
+    font-size:13px; color:rgba(255,255,255,0.8); line-height:1.5;
+    margin-top:8px;
   }
   @media (max-width:640px) {
-    .campaign-banner {
-      flex-direction:column; text-align:center; gap:10px;
-      padding:16px 20px;
-    }
+    .campaign-title { font-size:22px; }
+    .campaign-title em { font-size:32px; }
+    .campaign-body { padding:16px 20px 20px; }
   }
 
   /* ===== FLOATING CTA ===== */
@@ -1908,11 +1936,12 @@
       <div class="plan-card reveal">
         <div class="plan-icon blue">🤖</div>
         <div class="plan-name">AIコンシェルジュ</div>
+        <div class="plan-tagline blue">ゲスト対応を大幅に削減</div>
         <div class="plan-desc">QRコードを部屋に置くだけ。<br>ゲストの質問にAIが15言語で即レス。</div>
         <div class="plan-price">
           <span class="plan-currency">月額</span>
           <span class="plan-amount">7,980</span>
-          <span class="plan-period">円/月</span>
+          <span class="plan-period">円/月</span><span class="plan-tax">（税抜）</span>
         </div>
         <div class="plan-initial">初期設定費：39,800円（税抜）｜最低契約期間：3ヶ月</div>
         <ul class="plan-features">
@@ -1930,11 +1959,12 @@
         <div class="plan-badge">🔥 人気No.1</div>
         <div class="plan-icon rose">✨</div>
         <div class="plan-name">おもてなしAI+</div>
+        <div class="plan-tagline rose">ゲスト対応が一切不要に</div>
         <div class="plan-desc">AIコンシェルジュに加え、Airbnbメッセージ対応・<br>予約承認もMOSVAスタッフがすべて代行。</div>
         <div class="plan-price">
           <span class="plan-currency">月額</span>
           <span class="plan-amount">29,800</span>
-          <span class="plan-period">円/月</span>
+          <span class="plan-period">円/月</span><span class="plan-tax">（税抜）</span>
         </div>
         <div class="plan-initial">初期設定費：49,800円（税抜）｜最低契約期間：6ヶ月</div>
         <ul class="plan-features">
@@ -1946,6 +1976,7 @@
           <li>レビュー投稿対応</li>
           <li>電話対応（日・英・中）</li>
           <li>清掃連携・Airbnb請求対応</li>
+          <li>駆けつけの窓口</li>
           <li>宿泊者名簿の自動回収</li>
           <li>月次レポート</li>
           <li>Q&A追加・回答修正：月10件まで</li>
@@ -1976,6 +2007,7 @@
           <tr><td>レビュー投稿対応</td><td class="comp-cross">✕</td><td class="comp-check">✓</td></tr>
           <tr><td>電話対応（日・英・中）</td><td class="comp-cross">✕</td><td class="comp-check">✓</td></tr>
           <tr><td>清掃連携・請求対応</td><td class="comp-cross">✕</td><td class="comp-check">✓</td></tr>
+          <tr><td>駆けつけの窓口</td><td class="comp-cross">✕</td><td class="comp-check">✓</td></tr>
           <tr><td>月次レポート</td><td class="comp-cross">✕</td><td class="comp-check">✓</td></tr>
           <tr><td>Q&A追加・回答修正</td><td>月3件</td><td>月10件</td></tr>
           <tr><td>月額料金（税抜）</td><td><strong>7,980円</strong></td><td><strong>29,800円</strong></td></tr>
@@ -2159,10 +2191,13 @@
 <section class="cta-section" id="contact">
   <div class="container">
     <div class="campaign-banner reveal">
-      <div class="campaign-badge">LINE限定</div>
-      <div class="campaign-text">
-        <span class="campaign-title">初期費用 半額キャンペーン実施中</span>
-        <span class="campaign-sub">先着5施設限定｜公式LINEからお問い合わせの方だけの特別価格</span>
+      <div class="campaign-top">
+        <span class="campaign-badge">LINE限定</span>
+        <span class="campaign-limit">🔥 先着5施設限定</span>
+      </div>
+      <div class="campaign-body">
+        <div class="campaign-title">初期費用 <em>半額</em></div>
+        <div class="campaign-sub">公式LINEからお問い合わせいただいた方だけの特別価格です</div>
       </div>
     </div>
     <h2 class="reveal">まずは無料相談から。</h2>
